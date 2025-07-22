@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Detail</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+<div class="container py-5">
+    <h1>User Detail</h1>
+    <div id="userDetail"></div>
+</div>
+
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        const user = JSON.parse(localStorage.getItem('selectedUser'));
+
+        if (user) {
+            const detailHTML = `
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>First Name:</strong> ${user.firstName}</li>
+                    <li class="list-group-item"><strong>Last Name:</strong> ${user.lastName}</li>
+                    <li class="list-group-item"><strong>Gender:</strong> ${user.gender}</li>
+                    <li class="list-group-item"><strong>Age:</strong> ${user.age}</li>
+                    <li class="list-group-item"><strong>Birth Date:</strong> ${user.birthDate}</li>
+                    <li class="list-group-item"><strong>Email:</strong> ${user.email}</li>
+                    <li class="list-group-item"><strong>Phone:</strong> ${user.phone}</li>
+                </ul>
+            `;
+            $('#userDetail').html(detailHTML);
+        } else {
+            $('#userDetail').html('<p>No user data found.</p>');
+        }
+    });
+</script>
+</body>
+</html>
