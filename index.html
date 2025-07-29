@@ -6,12 +6,20 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="dataTables.css">
     <link rel="stylesheet" href="responsive.bootstrap5.min.css">
-
     <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
-<div class="container py-5">
+
+<!-- Loading Spinner -->
+<div id="loader">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+<!-- Table Container -->
+<div class="container-fluid px-5 py-5" style="overflow-x: auto; display: none;">
     <h1 class="pb-2 fw-bold">Data Table</h1>
     <table id="userTable" class="table table-striped table-bordered display responsive nowrap w-100">
         <thead>
@@ -21,26 +29,22 @@
             <th class="text-center">Last Name</th>
             <th class="text-center">Gender</th>
             <th class="text-center">Age</th>
-            <th class="text-center">birthDate</th>
+            <th class="text-center">Birth Date</th>
             <th class="text-center">Email</th>
             <th class="text-center">Phone</th>
             <th class="text-center">Detail</th>
         </tr>
         </thead>
         <tbody id="tbody">
-
         </tbody>
     </table>
-
 </div>
 
+<!-- Scripts -->
 <script src="jquery-3.7.1.min.js"></script>
 <script src="bootstrap.min.js"></script>
 <script src="dataTables.js"></script>
 <script src="responsive.bootstrap5.min.js"></script>
 <script src="script.js"></script>
-<script>
-
-</script>
 </body>
 </html>
