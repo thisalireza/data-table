@@ -15,6 +15,11 @@ async function getData() {
 
         // Initialize DataTable
         $('#userTable').DataTable({
+            layout: {
+                topStart: {
+                    buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+                }
+            },
             data: data.users,
             responsive: true,
             columns: [
