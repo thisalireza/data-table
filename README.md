@@ -101,5 +101,5 @@ This project currently has no license file. If you want to make it open-source, 
 
 Repository: `thisalireza/data-table` — created as a small and practical data-table example for front-end projects.
 
-If you want me to adapt this README to include exact API names, config options, or code snippets taken from the repo source files, I can update it to be more specific.
+
 
